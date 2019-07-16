@@ -43,7 +43,7 @@ public class DemoApplication implements ApplicationRunner {
         // Print the first ten elements of each RDD generated in this DStream to the console
         wordCounts.print();
 
-        jssc.start();              // Start the computation
-        jssc.awaitTermination();   // Wait for the computation to terminate
+        jssc.start();               // Start the computation
+        jssc.awaitTerminationOrTimeout(10000L);   // Wait for the computation to terminate
     }
 }
