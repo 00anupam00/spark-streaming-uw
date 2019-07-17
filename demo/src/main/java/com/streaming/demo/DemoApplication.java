@@ -44,6 +44,7 @@ public class DemoApplication implements ApplicationRunner {
         wordCounts.print();
 
         jssc.start();               // Start the computation
-        jssc.awaitTerminationOrTimeout(100000L);   // Wait for the computation to terminate
+        jssc.awaitTermination();
+        //jssc.awaitTerminationOrTimeout(100000L);   // Wait for the computation to terminate
     }
 }
